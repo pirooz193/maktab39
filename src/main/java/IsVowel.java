@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+public class IsVowel {
+
+
+
+
+        public static void main(String[] args){
+            boolean isVowel = false;
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a character");
+            char ch = scanner.next().charAt(0);
+            scanner.close();
+
+            switch (ch){
+                case 'a' :
+                case 'e' :
+                case 'i' :
+                case 'o' :
+                case 'u' :
+
+                case 'A' :
+                case 'E' :
+                case 'I' :
+                case 'O' :
+                case 'U' :  isVowel = true;
+            }//end of switch
+
+            if (isVowel){
+                System.out.println(ch + " is a vowel!" );
+            }
+            else {
+                if ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') )
+                    System.out.println(ch + " is a consonant!" );
+
+                else
+                    System.out.println("Your input is not an alphabet");
+            }
+        }
+    } //end of class
+
